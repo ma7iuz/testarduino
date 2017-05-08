@@ -42,8 +42,8 @@ namespace WindowsFormsApplication1
             try
             {
                 string text = serialPort1.ReadLine();
-                MessageBox.Show(text);
-                label1.Text += text;
+                listBox1.Items.Add(text);
+                
             }catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
