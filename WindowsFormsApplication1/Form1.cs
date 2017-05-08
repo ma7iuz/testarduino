@@ -15,6 +15,10 @@ namespace WindowsFormsApplication1
         public Form1()
         {
             InitializeComponent();
+            if(serialPort1.IsOpen)
+            {
+                serialPort1.Close();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
