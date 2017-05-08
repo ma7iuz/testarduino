@@ -42,12 +42,18 @@ namespace WindowsFormsApplication1
             try
             {
                 string text = serialPort1.ReadLine();
-                listBox1.Items.Add(text);
+                AddItem(text);
                 
             }catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void AddItem(string text)
+        {
+            this.Invoke((MethodInvoker)(() => listBox1.Items.Add(text)));
+
         }
     }
 }
